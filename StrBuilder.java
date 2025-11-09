@@ -8,7 +8,6 @@ public class StrBuilder {
         }
         //O(26)
         //O(26*n^2)
-        System.out.println(sb.length());
+        System.out.println(sb);
     }
-
 }
