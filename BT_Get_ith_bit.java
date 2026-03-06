@@ -41,15 +41,59 @@ public class BT_Get_ith_bit {
         return n | Bitmask;
 
     }
-    public static void main(String[] args){
+
+    public static int clearIBits(int n, int i){
+        int bitmask = (~0) << i;
+        return n & bitmask;
+    }
+
+    public static int ClearRangeIbits(int n, int i){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the number: ");
-        int n = sc.nextInt();
+        System.out.print("Enter jth bit: ");
+        int j = sc.nextInt();
+        int a = (~0 << j+1);
+        int b = (1<<i)-1;
 
-        System.out.print("Enter the index: ");
-        int i = sc.nextInt();
+        return n & a|b;
+    }
 
-        int bit = Update_ith_bit(n, i);
-        System.out.println( bit);
+    public static boolean IsPowerofTwo(int n){
+        return (n & (n-1)) == 0;
+    }
+
+    public static int countsetBits(int n){
+        int count = 0;
+        while(n>0){
+            if((n & 1) != 0){
+                count++;
+            }
+            n = n>>1;
+        }
+        return count;
+    }
+
+    public static int fastExpo(int a, int n){
+        int ans = 1;
+
+        while(n>0){
+            if((n&1) != 0){
+                ans = ans * a;
+            }
+            a = a*a;
+            n = n>>1;
+        }
+        return ans;
+    }
+
+    public static void main(String[] args){
+        // Scanner sc = new Scanner(System.in);
+        // System.out.print("Enter the number: ");
+        // int n = sc.nextInt();
+
+        // System.out.print("Enter the index: ");
+        // int i = sc.nextInt();
+
+        // int bit = ClearRangeIbits(n, i);   
+        System.out.println( fastExpo(5, 3));
     }
 }
