@@ -1,5 +1,3 @@
-
-
 public class Spiral {
     public static void printspiral(int matrix[][]){
         int startROW = 0;
