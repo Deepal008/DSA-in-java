@@ -1,5 +1,6 @@
 // import java.awt.datatransfer.SystemFlavorMap;
 
+
 public class Rat_in_Maze{
 
     public static boolean RatInMaze(int maze[][], int i, int j, int n, int sol[][]){
@@ -65,3 +66,6 @@ public class Rat_in_Maze{
     }
 
 }
+
+
+
