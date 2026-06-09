@@ -73,7 +73,7 @@ public class LL_palindrome {
         }
         Node right = prev;  // right half head
         Node left = head;
-
+ 
         //step3- check left half & right half
         while(right != null){
             if(left.data != right.data){
