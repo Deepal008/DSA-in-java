@@ -18,7 +18,7 @@ public class LL_ZigZag {
 
     
 
-     public void addFirst(int data){           //O(1) constant
+     public void addFirst(int data){          //O(1) constant
 
         //step1 = create new node
         Node newNode = new Node(data);
