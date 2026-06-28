@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Deque;
 import java.util.LinkedList;
 
 public class Deque_StacknQueue {
@@ -60,6 +60,6 @@ public class Deque_StacknQueue {
         System.out.println(q.remove());
         System.out.println(q.remove());
         System.out.println(q.remove());
-        System.out.println(q.remove());
+        System.out.println(q.remove()); 
     }
 }
