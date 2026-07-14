@@ -1,3 +1,4 @@
+
 public class Binary_Tree_Height {
 
     static class Node{
@@ -37,17 +38,40 @@ public class Binary_Tree_Height {
     }
 
 
+    
+    
     public static int sumOfNode(Node root){
         if(root == null){
             return 0;
         }
-
+        
         int leftSum = sumOfNode(root.left);
         int rightSum = sumOfNode(root.right);
-    
-
+        
+        
         return leftSum + rightSum + root.data;
     }
+    
+
+    //Approach 1
+    public static int diameter(Node root){  //O(n^2)
+        if(root == null){
+            return 0;
+        }
+
+        int leftDiam = diameter(root.left);
+        int lh =  height(root.left);
+
+        int rightDiam = diameter(root.right);
+        int rh = height(root.right);
+
+        int selfDiam = lh + rh +1;
+
+        return Math.max(Math.max(leftDiam, rightDiam), selfDiam);
+    }
+
+
+    
     public static void main(String[] args) {
         /*
                  1
@@ -65,8 +89,10 @@ public class Binary_Tree_Height {
         root.right.left = new Node(6);
         root.right.right = new Node(7);
 
-        System.out.println(height(root));
-        System.out.println(count(root));
-        System.out.println(sumOfNode(root));
-    }
+        // System.out.println(height(root));
+        // System.out.println(count(root));
+        // System.out.println(sumOfNode(root));
+
+        System.out.println(diameter(root));
+    } 
 }
