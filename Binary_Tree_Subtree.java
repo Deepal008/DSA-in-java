@@ -37,6 +37,7 @@ public class Binary_Tree_Subtree {
         if(root == null){
             return false;
         }
+        
         if(root.data == subRoot.data){
             if(isIdentical(root, subRoot)){
                 return true;
